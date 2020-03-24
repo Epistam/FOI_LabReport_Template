@@ -1,0 +1,121 @@
+% General Includes
+\documentclass[11pt,a4paper]{article} % a4paper passé à tous les packages d'après, dont geometry
+\usepackage{lmodern}
+\usepackage[utf8]{inputenc}
+\usepackage[francais,english]{babel} % Sous Linux
+\usepackage[T1]{fontenc}
+\usepackage{pifont}
+\usepackage{graphicx}
+\usepackage{multirow}
+\usepackage{pgf,tikz}
+\usepackage{minibox}
+\usepackage{marvosym}
+\usepackage{hyperref}
+\usepackage{enumerate}
+\usepackage{wrapfig}
+\usepackage{multicol}
+\usepackage{verbatim}
+\usepackage{amsmath}
+\usepackage{amsfonts}
+\usepackage{amssymb}
+\usepackage{wasysym}
+\usepackage{geometry}
+\usepackage{fancyhdr}
+\usepackage{esvect}
+\usepackage[ddmmyyyy]{datetime} % Jolie date formatée à volonté
+\usepackage{ifthen}
+\usepackage{xifthen}
+\usepackage{listings} % For computer science, code listings
+\usepackage{array}
+\usepackage{blkarray}
+\usepackage{appendix}
+\usepackage{lastpage}
+\usepackage{makecell}
+\usepackage{tabularx}
+\usepackage{caption}
+
+%%%%%%%%%%%%%%%%%%%%%%%%
+% Formattage structure % 
+%%%%%%%%%%%%%%%%%%%%%%%%
+
+% Paragraphs (uncomment one)
+\renewcommand\theparagraph{\arabic{paragraph}.}
+
+% Subparagraphs (uncomment one)
+\renewcommand\thesubparagraph{\alph{subparagraph}.}
+
+%%%%%%%%%%
+% Header %
+%%%%%%%%%%
+
+% Margins and page presets
+\geometry{hmargin=1.5cm,top=1.9cm,bottom=2.6cm} % Custom margin settings
+
+\setlength{\headheight}{45pt} % Header height : don't forget to adapt according to header contents
+\setlength{\headsep}{4mm}
+
+% En-tête
+\fancyhf{}
+\lhead{
+	\hspace{0mm}\includegraphics[scale=.46]{img/foi.png}
+}
+\rhead{
+	\scriptsize
+	/SUBJECT/ Report no. /REPORT_INDEX/\\
+	/SHORT_DATE/\\
+	/NAME/ /SURNAME/\\
+	Lab Teacher : /TEACHER/\hspace{-1mm} %yeah, that's ugly, af, i know
+}
+
+\cfoot{
+	-- \thepage \hspace{0.1mm} / \pageref{LastPage}  --
+}
+
+\fancypagestyle{plain}{
+  \renewcommand{\headrulewidth}{0pt}
+  \fancyhf{}
+  \fancyfoot[C]{-- \thepage \hspace{0.8mm}/ \pageref{LastPage} -- }
+}
+
+
+% Page de garde
+\title{
+	\vspace{-14mm} 
+	\begin{center}
+	\includegraphics[scale=.8]{img/foi2.jpg}
+	\end{center}
+	\vspace{7mm}
+	\Huge /SUBJECT/ \\
+	\huge Lab Report no. /REPORT_INDEX/ \\
+	%%\vspace{1cm}
+}
+
+\author{/NAME/ /SURNAME/}
+\date{/DATE/}
+
+\setcounter{tocdepth}{3}
+
+
+%%%%%%%%%%%%
+% Document %
+%%%%%%%%%%%%
+
+\begin{document}
+
+	% Langue
+	\selectlanguage{french}
+
+	% Page de garde
+	\maketitle
+%	\tableofcontents
+%	\newpage
+	\pagestyle{fancy}
+
+	\section{First section}
+
+	\newpage
+
+	\section{New section}
+
+
+\end{document}

@@ -6,6 +6,7 @@ REPORT_INDEX= # Report no. N
 SHORT_DATE= # The date in shortened format, e.g. "10.10.10"
 DATE= # The full date, e.g. "February 10th 2010"
 TEACHER= # The teacher's name, e.g. "Prof. Stallman"
+LAB_NAME= # The lab name, e.g. "Network elements and performance"
 #############################################################################################
 
 # The bash way
@@ -35,6 +36,7 @@ $(BASENAME): $(BASENAME).tex
 	-e "s/\/DATE\//$(DATE)/" \
 	-e "s/\/REPORT_INDEX\//$(REPORT_INDEX)/" \
 	-e "s/\/TEACHER\//$(TEACHER)/" \
+	-e "s/\/LAB_NAME\//$(LAB_NAME)/" \
 	$< > $(BUILDDIR)/$(BASENAME).tex
 	# Compiling twice for ToC & lastPage
 	$(LC) -jobname=$(BASENAME) -output-directory=$(BUILDDIR)/ $<
@@ -42,8 +44,9 @@ $(BASENAME): $(BASENAME).tex
 	# Moving the PDF back to current directory
 	mv build/$(BASENAME).pdf ./$(RELEASE_NAME).pdf
 
-clean:
-	rm -R $(BUILDDIR)
+clean: # --force allows the rms to keep going even if one fails
+	rm -Rf $(BUILDDIR)
+	rm -Rf $(RELEASE_NAME).pdf
 
 # Every rule that doesn't generate a same name file must be mentionned ere
 .PHONY: clean commit

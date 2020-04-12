@@ -6,7 +6,7 @@ REPORT_INDEX= # Report no. N
 SHORT_DATE= # The date in shortened format, e.g. "10.10.10"
 DATE= # The full date, e.g. "February 10th 2010"
 TEACHER= # The teacher's name, e.g. "Prof. Stallman"
-LAB_NAME= # The lab name, e.g. "Network elements and performance"
+LAB_NAME= # The lab name, e.g. "Network elements and performance" ; use '%' if empty
 #############################################################################################
 
 # The bash way

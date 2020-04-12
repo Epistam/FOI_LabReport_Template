@@ -77,6 +77,10 @@
   \fancyfoot[C]{-- \thepage \hspace{0.8mm}/ \pageref{LastPage} -- }
 }
 
+% New tabular column type : Y, aka centered columns
+\newcolumntype{Y}{>{\centering\arraybackslash}X}
+\renewcommand{\arraystretch}{1.5}
+\renewcommand\tabularxcolumn[1]{m{#1}}
 
 % Page de garde
 \title{

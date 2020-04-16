@@ -109,6 +109,33 @@
 
 	% Langue
 	\selectlanguage{french}
+	% Listings configuration
+	\lstset {
+		% General
+		language=Python,
+		basicstyle=\ttfamily\footnotesize, % Global style
+		showstringspaces=false, % Show plain spaces
+		tabsize=4, 
+		breaklines=true, % Break lines when they're too long
+		postbreak=,
+		breakindent=0.3cm,
+		breakatwhitespace=true, % Only break on spaces
+		% Frame and numbering
+		frame=single,
+		xleftmargin=0.2cm,
+		numbers=left,
+		stepnumber=1,
+		% Syntax highlighting
+		commentstyle=\color{darkgray},
+		keywordstyle=\color{blue},
+		stringstyle=\color{magenta},
+		% Encoding
+		inputencoding=utf8,
+		extendedchars=\true,
+		literate=
+	%	{é}{{\'e}}{2}
+	%	{è}{{\`e}}{1}
+	}
 
 	% Page de garde
 	\maketitle
@@ -122,6 +149,13 @@
 
 	\section{New section}
 
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%% LISTINGS EXAMPLE
+%		\paragraph{i)} \phantom{placeholder}
+%			\begin{figure}[h!]
+%				\lstinputlisting{docs/}
+%				\caption{}
+%			\end{figure}
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%% FIGURE EXAMPLE
 %		\begin{figure}[h]
 %			\centering
 %			\includegraphics[scale=0.9]{img/}
